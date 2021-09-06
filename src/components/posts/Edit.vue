@@ -111,7 +111,7 @@
             getPostById(){
                 let id= this.$route.params.id
                 let token = localStorage.getItem('token');
-                axios.get('http://localhost:8000/post/'+id+'?api_token='+token)
+                axios.get('http://18.141.176.150/post/'+id+'?api_token='+token)
                 // .then(({data})=>(this.post=data))
                 .then(response => {
                     this.title=response.data.post.title,
@@ -127,7 +127,7 @@
 
             PostUpdate() {
                  let token =localStorage.getItem('token')
-                axios.put(`http://localhost:8000/post/${this.$route.params.id}?api_token=`+token, this.post)
+                axios.put(`http://18.141.176.150/post/${this.$route.params.id}?api_token=`+token, this.post)
                     .then(response => {
                         this.post=response.data.data;
                         // this.title=response.data.data.title,

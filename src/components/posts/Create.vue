@@ -119,7 +119,7 @@
             
             PostStore() {
                 let token =localStorage.getItem('token')
-                axios.post('http://localhost:8000/post?api_token='+token, this.post)
+                axios.post('http://18.141.176.150/post?api_token='+token, this.post)
                     .then((response) => {
                         this.$router.push({
                             name: 'posts'

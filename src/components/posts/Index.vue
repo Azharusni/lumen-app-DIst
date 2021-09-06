@@ -109,7 +109,7 @@
             AllPost(){
                 let token = localStorage.getItem('token');
                 let pagee = this.pagination.current_page;
-            axios.get('http://localhost:8000/post?api_token='+token+'&&page='+ pagee)
+            axios.get('http://18.141.176.150/post?api_token='+token+'&&page='+ pagee)
             .then(response => {
                 this.posts = response.data.data.data;
                 this.pagination = response.data.pagination;   
@@ -121,7 +121,7 @@
                 let token= localStorage.getItem('token')
                 let del = confirm('Apakah anda yakin?')
                 if(del==true){
-                axios.delete(`http://localhost:8000/post/${id}?api_token=`+token)
+                axios.delete(`http://18.141.176.150/post/${id}?api_token=`+token)
                     .then(response => {
                         this.posts.splice(this.posts.indexOf(id), 1);
                         this.post = response.data

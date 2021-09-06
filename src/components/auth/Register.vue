@@ -127,7 +127,7 @@ import{required, minLength, email,} from 'vuelidate/lib/validators'
 
 		methods:{
 			registerIt() {
-				axios.post('http://localhost:8000/register',this.register)
+				axios.post('http://18.141.176.150/register',this.register)
 				.then(response => {
 					let token=response.data.user.api_token;
 					localStorage.setItem('token',token);

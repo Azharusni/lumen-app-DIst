@@ -122,7 +122,7 @@
 			
 			logItIn(){		
 				
-				axios.post('http://localhost:8000/login',this.login)
+				axios.post('http://18.141.176.150/login',this.login)
 				.then(response => {
 					let token=response.data.user.api_token;
 					localStorage.setItem('token',token);			
